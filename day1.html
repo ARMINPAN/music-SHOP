@@ -7,14 +7,55 @@
     </head>
     <body>
         <div class="header">
+            <p class="button">&#9776;</p>
             <div class="ghabeSamteChap">
-                <div class="shoR"><p>Feel the bass in your bones.</p></div>
-                
+                <div class="shoR">Feel the bass in your bones.</div>
+                <!-- /////////////////////////////////////////////////////////not zoomed navbar -->
+                <ul class="navbar">
+                    <li><a href="https://www.w3schools.com/css/css3_flexbox_items.asp" style="background-color: transparent; text-decoration: none; color: black;" target="_blank">Home</a></li>
+                    <li><a href="https://www.w3schools.com/css/css3_flexbox_items.asp" style="background-color: transparent; text-decoration: none; color: black;" target="_blank">Headphones</a></li>
+                    <li><a href="https://www.w3schools.com/css/css3_flexbox_items.asp" style="background-color: transparent; text-decoration: none; color: black;" target="_blank">Speakers</a></li>
+                    <li><a href="https://www.w3schools.com/css/css3_flexbox_items.asp" style="background-color: transparent; text-decoration: none; color: black;" target="_blank">Others</a></li>
+                    <li><a href="https://www.w3schools.com/css/css3_flexbox_items.asp" style="background-color: transparent; text-decoration: none; color: black;" target="_blank">Contact</a></li>
+                </ul>
+                <!-- //////////////////////////////////////////////////////////responsive navbar -->
+                <ul class="sideNavbar">
+                    <li style="font-size: 50px; text-align: right; margin-right: 25px;">&times;</li>
+                    <li>Homes</li>
+                    <li>Homes</li>
+                    <li>Homes</li>
+                    <li>Homes</li>
+                    <li>Homes</li>
+                </ul>
             </div>
             <div class="ghabeSamteRast">
                 <img class="aks" src="headerBack1.jpg">
+                <img class="aks" src="headerBack2.jpg">
+                <img class="aks" src="headerBack3.jpg">
+                <img class="aks" src="headerBack4.jpg">
             </div>
+            <!-- ////////////////////////////////responsive mode -->
+            <div class="shoR2">Feel the bass in your bones.</div>
+
         </div>
 
+
+
+        <!-- ////////////////////////////////////////////////javascript image gallery -->
+        <script>
+            var myIndex = 0;
+            carousel();
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("aks");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 4000); // Change image every 4 seconds
+            }
+        </script>
     </body>
 </html>
